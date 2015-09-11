@@ -1,5 +1,7 @@
 setwd("C:/ExData_Plotting1")
 
+library(data.table)
+
 dataFile <- "./data/household_power_consumption.txt"
 data <- fread(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, na.strings="?", data.table=TRUE)
 subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
